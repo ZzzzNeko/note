@@ -7,7 +7,7 @@
 export default {
   computed: {
     defaultLink() {
-      return this.$site ? Object.keys(this.$site.themeConfig.sidebar)[0] : "";
+      return this.$site ? this.$site.themeConfig.nav[0].link : "";
     },
   },
 };
