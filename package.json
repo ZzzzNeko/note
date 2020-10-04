@@ -10,6 +10,7 @@
     "build": "node .vuepress/scripts/index.js build"
   },
   "devDependencies": {
+    "@types/d3": "^5.16.2",
     "@vuepress/plugin-active-header-links": "^1.5.4",
     "@vuepress/plugin-back-to-top": "^1.5.4",
     "@vuepress/plugin-medium-zoom": "^1.5.4",

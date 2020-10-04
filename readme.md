@@ -1,2 +1,2 @@
 <HomePage />
-<MapTree />
+<Outline />
