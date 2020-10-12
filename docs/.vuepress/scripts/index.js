@@ -27,7 +27,7 @@ commander
       ? note
       : await (await getAnswer()).note;
 
-    const script = `cross-env target=${target} vuepress dev ./`;
+    const script = `cross-env target=${target} vuepress dev docs`;
     spawn(script, { shell: true, stdio: "inherit", cwd: process.cwd() });
   });
 
@@ -40,7 +40,7 @@ commander
       ? note
       : await (await getAnswer()).note;
 
-    const script = `cross-env target=${target} vuepress build ./`;
+    const script = `cross-env target=${target} vuepress build docs`;
     spawn(script, { shell: true, stdio: "inherit", cwd: process.cwd() });
   });
 
