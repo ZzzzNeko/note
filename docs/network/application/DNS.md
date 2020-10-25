@@ -1,6 +1,6 @@
 # 域名系统
 
-域名系统(Domain Name System，缩写 DNS)，是将域名与 IP 地址相互映射的分布式数据库 <br>
+域名系统(Domain Name System，DNS)，是将域名与 IP 地址相互映射的分布式数据库 <br>
 DNS 运行在应用层上，基于 UDP 协议，默认端口 53
 
 ## 域名层级
