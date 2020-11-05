@@ -34,31 +34,95 @@ import {
   tree as convertToTree,
   cluster as convertToCluster,
 } from "d3-hierarchy";
+import common from "../utils/common";
+
 /**
  * $page.headers 信息转树
  * type Header = { level: number, title: string }
  * type Headers = Header[]
  */
-function convertPageToNode(page) {
-  const { title = "无标题", headers, path } = page;
-  const root = { title, level: 1, children: [], path };
-  const getLastItem = (array) => array[array.length - 1];
-  if (!headers) return root;
-  for (var i = 0; i < headers.length; i++) {
-    const header = headers[i];
-    const item = {
-      title: header.title,
-      level: header.level,
-      path: `${path}#${header.slug}`,
-      children: [],
-    };
-    let parent = root;
-    while (parent.level < item.level - 1) {
-      const lastChild = getLastItem(parent.children);
-      if (lastChild) parent = lastChild;
+// function convertPageToNode(page) {
+//   const { title = "无标题", headers, path } = page;
+//   const root = { title, level: 1, children: [], path };
+//   const getLastItem = (array) => array[array.length - 1];
+//   if (!headers) return root;
+//   for (var i = 0; i < headers.length; i++) {
+//     const header = headers[i];
+//     const item = {
+//       title: header.title,
+//       level: header.level,
+//       path: `${path}#${header.slug}`,
+//       children: [],
+//     };
+//     let parent = root;
+//     while (parent.level < item.level - 1) {
+//       const lastChild = getLastItem(parent.children);
+//       if (lastChild) parent = lastChild;
+//     }
+//     parent.children.push(item);
+//   }
+//   return root;
+// }
+
+function getDiffTail(str1, str2) {
+  const minLen = Math.min(str1.length, str2.length);
+  for (let i = 0; i < minLen; i++) {
+    if (str1[i] != str2[i]) {
+      return [str1.slice(i), str2.slice(i)];
     }
-    parent.children.push(item);
   }
+  return ["", ""];
+}
+
+function convertPageToRoot(oriPages) {
+  const pages = common.copy(oriPages);
+  const paths = pages.map((page) => page.path);
+
+  for (let i = 0; i < pages.length; i++) {
+    const page = pages[i];
+    const parentIndex = paths.findIndex((path) => {
+      // page.path 为 path 的子孙层级
+      if (page.path !== path && page.path.includes(path)) {
+        const [empty, tail] = getDiffTail(path, page.path);
+        // 子层级
+        if (empty == "" && !tail.includes("/")) {
+          return true;
+        }
+      }
+    });
+    const parent = pages[parentIndex];
+    if (parent) {
+      if (parent.children) {
+        parent.children.push(page);
+      } else {
+        parent.children = [page];
+      }
+    }
+  }
+
+  const root = pages.find((page) => page.path == "/");
+  const queue = [...root.children];
+
+  while (queue.length) {
+    const node = queue.shift();
+    if (node.children) {
+      queue.push(...node.children);
+    } else {
+      // 叶子节点
+      node.children = node.headers
+        .map((header) => {
+          return header.level > 2
+            ? null
+            : {
+                title: header.title,
+                level: header.level,
+                path: `${node.path}#${header.slug}`,
+              };
+        })
+        .filter((item) => item != null);
+    }
+  }
+
   return root;
 }
 
@@ -80,6 +144,7 @@ export default {
   },
   data() {
     return {
+      treeWidth: 720,
       treeNode: null,
       rate: 30,
       links: [], // string[]
@@ -99,17 +164,17 @@ export default {
     },
     generateLink() {
       return linkHorizontal()
-        .x((d) => (this.isVertical ? d.x : d.y) * this.treeHeight)
-        .y((d) => (this.isVertical ? d.y : d.x) * this.treeHeight);
+        .x((d) => (this.isVertical ? d.x : d.y) * this.treeWidth)
+        .y((d) => (this.isVertical ? d.y : d.x) * this.treeWidth);
     },
   },
   methods: {
     renderTree(treeNode) {
-      window.treeNode = treeNode;
+      // window.treeNode = treeNode;
       this.links = treeNode.links().map(this.generateLink);
       this.nodes = treeNode.descendants().map((node) => {
-        const x = (this.isVertical ? node.x : node.y) * this.treeHeight;
-        const y = (this.isVertical ? node.y : node.x) * this.treeHeight;
+        const x = (this.isVertical ? node.x : node.y) * this.treeWidth;
+        const y = (this.isVertical ? node.y : node.x) * this.treeWidth;
         node.data.translate = `translate(${x}, ${y})`;
         node.data.isLeaf = !node.children;
         return node;
@@ -136,8 +201,8 @@ export default {
   },
   mounted() {
     const { title, pages } = this.$site;
-    console.log(this.$site);
-    const rootData = { title, children: pages.map(convertPageToNode) };
+    const rootData = convertPageToRoot(pages);
+    rootData.title = title;
     const treeNode = this.convertFn(hierarchy(rootData));
     this.treeNode = treeNode;
     this.renderTree(treeNode);
@@ -147,7 +212,7 @@ export default {
 
 <style lang="scss" scoped>
 .tree-chart {
-  padding: 30px 100px;
+  padding: 30px 0;
   overflow: visible;
 }
 .node-link {
