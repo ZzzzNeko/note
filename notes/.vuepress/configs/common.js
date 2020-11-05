@@ -15,7 +15,7 @@ const baseName = require('../../../package.json')
  */
 module.exports = (target) => ({
   target: target,
-  base: `/${baseName.name}/`, // github 部署地址后缀为 项目名称，如 https://zzzneko.github.io/note/
+  base: `/${baseName.name}/${target}/`,
   dest: `docs/${target}/`,
   patterns: ["**/*.vue", "readme.md", `${target}/**/*.md`], // 直解析当前目标下的md
   // head: [["script", { src: "/libs/d3.js"}]],
