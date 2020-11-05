@@ -27,11 +27,11 @@ commander
       ? note
       : await (await getAnswer()).note;
 
-    const script = `cross-env target=${target} vuepress dev docs`;
+    const script = `cross-env target=${target} vuepress dev notes`;
     spawn(script, { shell: true, stdio: "inherit", cwd: process.cwd() });
   });
 
-// TODO: 添加 -a, --all 选项
+// NOTE: github 只支持 docs/ 和 (root)/ 下静态部署，无需 --all 选项
 commander
   .command("build")
   .arguments("[note]")
@@ -40,7 +40,7 @@ commander
       ? note
       : await (await getAnswer()).note;
 
-    const script = `cross-env target=${target} vuepress build docs`;
+    const script = `cross-env target=${target} vuepress build notes`;
     spawn(script, { shell: true, stdio: "inherit", cwd: process.cwd() });
   });
 
