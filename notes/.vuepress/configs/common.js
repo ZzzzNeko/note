@@ -14,7 +14,7 @@
  */
 module.exports = (target) => ({
   target: target,
-  base: `/notes/`,
+  // base: `/`,
   dest: `docs/`, // NOTE: github 上只支持 docs/ 和 (root)/ 目录进行静态部署，二级分类没有意义
   // dest: `docs/${target}/`,
   patterns: ["**/*.vue", "readme.md", `${target}/**/*.md`], // 直解析当前目标下的md
