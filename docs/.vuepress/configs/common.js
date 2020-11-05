@@ -15,7 +15,7 @@
 module.exports = (target) => ({
   target: target,
   base: `/notes/`,
-  dest: `.production/${target}/`,
+  dest: `production/${target}/`,
   patterns: ["**/*.vue", "readme.md", `${target}/**/*.md`], // 直解析当前目标下的md
   // head: [["script", { src: "/libs/d3.js"}]],
   themeConfig: {
