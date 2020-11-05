@@ -2,7 +2,7 @@ const fs = require("fs");
 const { spawn } = require("child_process");
 const commander = require("commander");
 const prompts = require("prompts");
-const { getVuepressPath } = require("../utils/convert");
+const { getProjectPath, getVuepressPath } = require("../utils/convert");
 const { exclude } = require("../utils/common");
 
 const configs = fs.readdirSync(getVuepressPath("./configs"));
@@ -39,7 +39,18 @@ commander
     const target = targets.includes(note)
       ? note
       : await (await getAnswer()).note;
-
+    const docsDir = getProjectPath('docs')
+    try {
+      fs.statSync(docsDir)
+    }catch(err) {
+      fs.mkdirSync(docsDir)
+    }
+    // TODO: 导航文件内容动态生成
+    fs.copyFile(
+      getVuepressPath('public/index.html'), 
+      getProjectPath('docs/index.html'), 
+      error => console.log(error ? error.toString() : 'copy index finished')
+    )
     const script = `cross-env target=${target} vuepress build notes`;
     spawn(script, { shell: true, stdio: "inherit", cwd: process.cwd() });
   });

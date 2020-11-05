@@ -1,3 +1,4 @@
+const baseName = require('../../../package.json')
 /**
  * 配置格式
  * - dest: 构建后输出目录
@@ -14,9 +15,8 @@
  */
 module.exports = (target) => ({
   target: target,
-  base: `/note/`,
-  dest: `docs/`, // NOTE: github 上只支持 docs/ 和 (root)/ 目录进行静态部署，二级分类没有意义
-  // dest: `docs/${target}/`,
+  base: `/${baseName.name}/`, // github 部署地址后缀为 项目名称，如 https://zzzneko.github.io/note/
+  dest: `docs/${target}/`,
   patterns: ["**/*.vue", "readme.md", `${target}/**/*.md`], // 直解析当前目标下的md
   // head: [["script", { src: "/libs/d3.js"}]],
   themeConfig: {
