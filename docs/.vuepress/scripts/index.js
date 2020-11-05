@@ -14,7 +14,7 @@ async function getAnswer() {
   return await prompts({
     type: "select",
     name: "note",
-    message: "xx",
+    message: "select note",
     choices: targets.map((target) => ({ title: target, value: target })),
   });
 }
