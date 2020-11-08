@@ -47,7 +47,7 @@ commander
     }
     // TODO: 导航文件内容动态生成
     fs.copyFile(
-      getVuepressPath('public/index.html'), 
+      getVuepressPath('public/guide.html'), 
       getProjectPath('docs/index.html'), 
       error => console.log(error ? error.toString() : 'copy index finished')
     )
