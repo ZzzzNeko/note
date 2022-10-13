@@ -1,3 +1,5 @@
+[toc]
+
 # 域名系统
 
 域名系统(Domain Name System，DNS)，是将域名与 IP 地址相互映射的分布式数据库 <br>
