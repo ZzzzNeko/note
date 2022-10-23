@@ -1,0 +1,53 @@
+1. 事件委托
+2. promise
+3. onload DOMContentLoaded
+4. 跨域
+5. 原型链 typeof instanceof new
+6. 闭包
+7. this
+8. flex: 1 全称  flex-grow flex-shrink flex-basis
+9. 事件循环
+10. URL 到页面加载
+    1. 查缓存
+    2. dns 解析获取 ip
+    3. tcp 连接请求
+    4. http 请求
+    5. 资源加载解析：html -> dom tree; css -> style rule ==> render tree --> layout --> paint --> display
+    6. tcp 断开
+11. 缓存: 
+    - 强缓存:   Expired | Cache-control: max-age
+    - 协商缓存 Last-Modified|If-Modified-Since ETag/If-None-Match
+12. dns: 
+    - 静态映射: dns -> 本地(客户端, host, 本地 dns 缓存, 本地dns服务器)
+    - 动态映射: 本地dns服务器 --> 根域名 --> 顶级域名 --> 权威域名
+13. cookie 属性, 通过 set-cookie 头 设置
+     - <cookie-name>=<cookie-value> 
+    - expires
+    - max-age
+    - domain
+    - secure:  指的是 https
+    - httponly
+    - samesite: 用于防止 csrf 攻击
+14. bfc
+15. .sort 内部机制
+16. 1px 移动端处理   transform: scale(0.5)
+17. ESM & commonjs
+
+
+笔试
+- 时针分针夹角   出现多次
+- 动画(requestAnimationFrame)
+- autoComplete
+- 大数运算
+- promise
+- 爬楼梯
+- 吃香蕉
+- 回文字
+- 从数组中找出三数之和为n
+
+项目面
+- 难点、优化、量化
+
+
+
+

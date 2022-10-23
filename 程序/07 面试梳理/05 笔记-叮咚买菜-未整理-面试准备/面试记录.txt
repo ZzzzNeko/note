@@ -1,0 +1,53 @@
+---- 叮咚买菜 电话面试 -----
+自我介绍
+
+vue
+- watch & computed 区别(深层次的) , watch 的属性          答的不好
+- 组件通信
+- nextTick
+- 插件编写
+
+vuex
+- 模块 a 和 模块 b 交互                  没答出来(这个确实不应该，主要还是没用过)
+
+cookie & token & 安全(csrf)        
+cors 如何传递 cookie                    cookie 部分没答好    前端设置withCredentials，后端设置Access-Control-Allow-Credentials
+
+事件循环
+跨域请求
+setTimeout 与 requestAnimateFrame 的区别    答得一般
+
+大列表渲染                                    虚拟列表没答出来(后面实现了一下，感觉自己没答错)
+
+数组 flatten , 去重
+
+小程序优化
+- 分包
+- 页面埋点(mixin)
+- 图片懒加载
+
+webpack
+- 懒加载原理(import  转换为 script)
+- 优化
+- webpack 插件                             没写过，没答上来
+
+结尾
+- 在看什么，研究过哪些
+- 有什么要问的
+
+------ 二面 ------
+1. 两个有序数组合并
+2. 最长非重复子字符串
+3. 数组 -> { [key]: 出现次数 }, 使用 .reduce 实现
+4. 判断点在面中      没做出来
+5. 移动端适配         没答出来
+6. 开源贡献       markdown-it-mermaid
+7. 工程化           答得 npm script
+8. 10张图片做成动画   答得 requestAnimationFrame 和 @keyframes: translate (函数为 step)   这里没想到别的方法了
+9. 垂直居中        flex, -50%, 
+10. 性能优化
+11. 新的东西，关注哪些，看了哪些   
+12. 登录鉴权   token & cookie         这里答得 cookie 的弊端, csrf
+13. Promise 手写   
+14. 还有什么问题
+
