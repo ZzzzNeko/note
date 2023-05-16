@@ -85,6 +85,11 @@ git remote add origin <server>
 git push origin <branch>
 ```
 
+```bash
+# 修改仓库源
+git remote set-url origin <new-url>
+```
+
 ## 分支管理
 
 创建、删除、切换
