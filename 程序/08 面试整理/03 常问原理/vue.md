@@ -7,7 +7,6 @@
 - 插件
 - 指令：指令声明周期
 - watch、computed
-- nextTick
 
 ## 渲染机制
 
@@ -34,42 +33,3 @@
 对于单个有动态绑定的元素，可以在编译时对其进行推断，并添加 更新类型标记，一个元素可以有多个更新类型标记(位运算推断)
 
 vnode 子节点也会被标记类型，如包含多个根节点的模板会标记为一个片段
-
-#### 树结构打平
-
-## 响应式
-
-## Diff 算法
-
-## router
-
-### hash
-
-- 监听 hashchange 事件
-- 纯前端实现
-
-### history
-
-- onpopstate 事件
-- router.push 、router.replace、router.go 对应 history.pushState、history.replaceState、history.go
-- 其中 history.pushState、history.replaceState 不会触发 onpopstate 事件
-
-```js
-let _wr = function (type) {
-  let orig = history[type];
-  return function () {
-    let rv = orig.apply(this, arguments);
-    let e = new Event(type);
-    e.arguments = arguments;
-    window.dispatchEvent(e);
-    return rv;
-  };
-};
-
-history.pushState = _wr("pushState");
-history.replaceState = _wr("replaceState");
-```
-
-手动监听 pushState replaceState 事件
-
-当页面刷新时，请求路径未匹配资源时，服务器返回 index.html 即可
