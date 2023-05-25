@@ -1,12 +1,45 @@
-# Vue(TODO:)
+# vue
 
-- 虚拟 DOM 是什么
+仅作大纲描述
 
-## 基本使用
+## 数据劫持
 
-- 插件
-- 指令：指令声明周期
-- watch、computed
+```js
+/**
+ * v2.x 采用 defineProperty 进行数据接持，存在以下问题
+ * - 需要对初始对象进行深拷贝
+ * - 需要对所有属性进行遍历
+ */
+```
+
+```js
+// Proxy 可以直接拦截对象本身
+const obj = {};
+const proxyObj = new Proxy(obj, {
+  get(target, prop) {},
+  set(target, prop, value) {
+    target[prop] = value;
+  },
+});
+proxyObj.v = 233;
+obj;
+```
+
+## 初始化
+
+init
+initLeftCycle
+initEvent
+initRender
+------ beforeCreate ------
+initInjections(vm)
+initState(vm)
+initProvide(vm)
+------ created ------
+tpl -> render: vnode
+------ beforeMount ------
+mount
+------ mounted ------
 
 ## 渲染机制
 
