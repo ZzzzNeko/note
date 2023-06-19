@@ -69,6 +69,27 @@ export default defineConfig({
             { text: '流程控制', link: '/程序/前端基础/sass/05 流程控制' },
             { text: '样式复用', link: '/程序/前端基础/sass/06 样式复用' },
           ]
+        },
+        {
+          text: 'javascript',
+          collapsed: false,
+          items: [
+            { text: 'BOM', link: '/程序/前端基础/javascript/BOM' },
+            { text: 'DOM', link: '/程序/前端基础/javascript/DOM' },
+            { text: '尺寸与定位', link: '/程序/前端基础/javascript/尺寸与定位' },
+          ]
+        },
+        {
+          text: 'typescript',
+          collapsed: false,
+          items: [
+            { text: '数据类型', link: '/程序/前端基础/typescript/01 数据类型' },
+            { text: '基本类型及扩展', link: '/程序/前端基础/typescript/02 基本类型及扩展' },
+            { text: '数组类型及扩展', link: '/程序/前端基础/typescript/03 数组类型及扩展' },
+            { text: '面向对象及扩展', link: '/程序/前端基础/typescript/04 面向对象及扩展' },
+            { text: '高级类型', link: '/程序/前端基础/typescript/05 高级类型' },
+            { text: '类型性质', link: '/程序/前端基础/typescript/06 类型性质' },
+          ]
         }
       ],
       '/程序/开发生态/': [
@@ -198,7 +219,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      // { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://gitee.com/zzzzneko/note' }
     ]
   }
 })
