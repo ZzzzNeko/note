@@ -1,5 +1,3 @@
-[toc]
-
 # HTTP
 
 ## HTTP 的特点
