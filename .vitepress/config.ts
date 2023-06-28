@@ -18,7 +18,7 @@ export default defineConfig({
         text: '程序',
         items: [
           { text: '前端基础', link: '/程序/前端基础/css/01 基本语法' },
-          { text: '开发生态', link: '/程序/开发生态/项目管理/Git 基本使用' },
+          { text: '开发工具', link: '/程序/开发工具/项目管理/Git 基本使用' },
           { text: '网络通信', link: '/程序/网络通信/网络模型/网络模型' },
           { text: '工作原理', link: '/程序/工作原理/浏览器/高层结构' },
           { text: '场景应用', link: '/程序/场景应用/剪切板' },
@@ -92,32 +92,41 @@ export default defineConfig({
           ]
         }
       ],
-      '/程序/开发生态/': [
+      '/程序/开发工具/': [
         {
           text: '项目管理',
           items: [
-            { text: 'Git 基本使用', link: '/程序/开发生态/项目管理/Git 基本使用' }
+            { text: 'Git 基本使用', link: '/程序/开发工具/项目管理/Git 基本使用' }
+          ]
+        },
+        {
+          text: '依赖管理',
+          collapsed: false,
+          items: [
+            { text: 'node 版本管理', link: '/程序/开发工具/依赖管理/node 版本管理' },
+            { text: '包管理器 - npm', link: '/程序/开发工具/依赖管理/包管理器 - npm' },
+            { text: '包版本检测 - ncu', link: '/程序/开发工具/依赖管理/包版本检测 - ncu' },
           ]
         },
         {
           text: '打包工具 - webpack',
           collapsed: false,
           items: [
-            { text: '概念介绍', link: '/程序/开发生态/打包工具 - webpack/01 概念介绍' },
-            { text: '基础配置', link: '/程序/开发生态/打包工具 - webpack/02 基础配置' },
-            { text: '开发环境', link: '/程序/开发生态/打包工具 - webpack/03 开发环境' },
-            { text: '生产环境', link: '/程序/开发生态/打包工具 - webpack/04 生产环境' },
-            { text: '性能优化', link: '/程序/开发生态/打包工具 - webpack/05 性能优化' },
-            { text: '配置示例', link: '/程序/开发生态/打包工具 - webpack/06 配置示例' },
-            { text: '配置示例 - webpack5', link: '/程序/开发生态/打包工具 - webpack/07 配置示例 - webpack5' },
+            { text: '概念介绍', link: '/程序/开发工具/打包工具 - webpack/01 概念介绍' },
+            { text: '基础配置', link: '/程序/开发工具/打包工具 - webpack/02 基础配置' },
+            { text: '开发环境', link: '/程序/开发工具/打包工具 - webpack/03 开发环境' },
+            { text: '生产环境', link: '/程序/开发工具/打包工具 - webpack/04 生产环境' },
+            { text: '性能优化', link: '/程序/开发工具/打包工具 - webpack/05 性能优化' },
+            { text: '配置示例', link: '/程序/开发工具/打包工具 - webpack/06 配置示例' },
+            { text: '配置示例 - webpack5', link: '/程序/开发工具/打包工具 - webpack/07 配置示例 - webpack5' },
           ]
         },
         {
           text: '打包工具 - vite',
           collapsed: false,
           items: [
-            { text: '快速开始', link: '/程序/开发生态/打包工具 - vite/快速开始' },
-            { text: '项目配置', link: '/程序/开发生态/打包工具 - vite/项目配置' },
+            { text: '快速开始', link: '/程序/开发工具/打包工具 - vite/快速开始' },
+            { text: '项目配置', link: '/程序/开发工具/打包工具 - vite/项目配置' },
           ]
         }
       ],
