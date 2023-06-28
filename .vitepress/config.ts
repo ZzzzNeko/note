@@ -19,6 +19,7 @@ export default defineConfig({
         items: [
           { text: '前端基础', link: '/程序/前端基础/css/01 基本语法' },
           { text: '项目管理', link: '/程序/项目管理/版本管理/Git 基本使用' },
+          { text: '框架生态', link: '/程序/框架生态/koa/01 基本使用' },
           { text: '网络通信', link: '/程序/网络通信/网络模型/网络模型' },
           { text: '工作原理', link: '/程序/工作原理/浏览器/高层结构' },
           { text: '场景应用', link: '/程序/场景应用/剪切板' },
@@ -128,6 +129,31 @@ export default defineConfig({
             { text: '快速开始', link: '/程序/项目管理/打包工具 - vite/快速开始' },
             { text: '项目配置', link: '/程序/项目管理/打包工具 - vite/项目配置' },
           ]
+        }
+      ],
+      '/程序/框架生态/': [
+        {
+          text: 'vue',
+          collapsed: false,
+          items: []
+        },
+        {
+          text: 'koa',
+          collapsed: false,
+          items: [
+            { text: '基本使用', link: '/程序/框架生态/koa/01 基本使用' },
+            { text: '常用中间件', link: '/程序/框架生态/koa/02 常用中间件' },
+          ]
+        },
+        {
+          text: '数据可视化 - g2',
+          collapsed: false,
+          items: []
+        },
+        {
+          text: '数据可视化 - g6',
+          collapsed: false,
+          items: []
         }
       ],
       '/程序/网络通信/': [
