@@ -133,17 +133,17 @@ export default defineConfig({
       ],
       '/程序/框架生态/': [
         {
-          text: 'vue',
-          collapsed: false,
-          items: []
-        },
-        {
           text: 'koa',
           collapsed: false,
           items: [
             { text: '基本使用', link: '/程序/框架生态/koa/01 基本使用' },
             { text: '常用中间件', link: '/程序/框架生态/koa/02 常用中间件' },
           ]
+        },
+        {
+          text: 'vue',
+          collapsed: false,
+          items: []
         },
         {
           text: '数据可视化 - g2',
@@ -153,7 +153,20 @@ export default defineConfig({
         {
           text: '数据可视化 - g6',
           collapsed: false,
-          items: []
+          items: [
+            { text: '快速开始', link: '/程序/框架生态/g6/01 快速开始' },
+            { text: '图的元素', link: '/程序/框架生态/g6/02 图的元素' },
+            { text: '图的元素 - Shape', link: '/程序/框架生态/g6/02-01 图的元素 - Shape' },
+            { text: '图的元素 - Node', link: '/程序/框架生态/g6/02-02 图的元素 - Node' },
+            { text: '图的元素 - Edge', link: '/程序/框架生态/g6/02-03 图的元素 - Edge' },
+            { text: '图的元素 - Combo', link: '/程序/框架生态/g6/02-04 图的元素 - Combo' },
+            { text: '图的布局', link: '/程序/框架生态/g6/03 图的布局' },
+            { text: '图的布局 - 一般布局', link: '/程序/框架生态/g6/03-01 图的布局 - 一般布局' },
+            { text: '图的布局 - 树形布局', link: '/程序/框架生态/g6/03-02 图的布局  - 树形布局' },
+            // { text: '交互事件', link: '/程序/框架生态/g6/04 交互事件' },
+            // { text: '基本动画', link: '/程序/框架生态/g6/05 基本动画' },
+            // { text: '插件工具', link: '/程序/框架生态/g6/06 插件工具' },
+          ]
         }
       ],
       '/程序/网络通信/': [
