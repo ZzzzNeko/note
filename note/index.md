@@ -3,7 +3,7 @@ layout: page
 ---
 
 <script setup>
-import CustomComponent from '../.vitepress/comps/home.vue'
+import Home from '../.vitepress/comps/home.vue'
 </script>
 
-<CustomComponent />
+<Home />
