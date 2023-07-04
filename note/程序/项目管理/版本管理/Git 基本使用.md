@@ -245,4 +245,4 @@ Git 的基本工作流程
 
 Git 常用的分支管理
 
-![git版本流.png](https://note.youdao.com/yws/res/76611/WEBRESOURCEdca6b619f2abd11b85a2f5c5f8fd22ec)
+![git版本流.png](git版本流.png)
