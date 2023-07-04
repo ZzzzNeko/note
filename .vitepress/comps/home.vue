@@ -27,5 +27,7 @@ import { tree1, tree2, tree3, tree4, tree5, tree6, tree7, tree8 } from '../sideb
 .graph-tree {
   min-width: 400px;
   width: 24%;
+  margin: 2px;
+  box-shadow: 1px 4px 4px rgba(93, 26, 107, 0.2);
 }
 </style>
