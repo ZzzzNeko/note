@@ -1,8 +1,8 @@
-# [pinia](https://pinia.vuejs.org/zh/)
+# vue3: pinia
 
 ## 写在前面
 
-pinia 作为 vuex 在 vue3 的替代品主要解决了以下几个问题
+[pinia](https://pinia.vuejs.org/zh/) 作为 vuex 在 vue3 的替代品主要解决了以下几个问题
 
 - vuex 的类型声明在 vue3 项目中使用及其麻烦
 - 独立的模块，不再需要嵌套的结构

@@ -1,4 +1,4 @@
-# vuex
+# vue2: vuex
 
 ## 写在前面
 
