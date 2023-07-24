@@ -5,17 +5,24 @@
 <script lang='ts' setup>
 import { ref, shallowRef, reactive, computed, watch, watchEffect, onMounted } from 'vue'
 import { renderGraph } from './graph'
-import { useRouter } from 'vitepress'
 
 interface Props {
   renderData: any
 }
+interface Emits {
+  (ev: 'clickLeaf', link: string): void
+}
 const props = defineProps<Props>()
+const emits = defineEmits<Emits>()
 const tree = shallowRef()
-const router = useRouter()
 
-function handleTreeData(tree) {
-  // tree.id = tree.text
+interface Tree {
+  text: string
+  items: Tree[]
+  [key: string]: any
+}
+
+function handleTreeData(tree: Tree) {
   tree.children = tree.items
   tree.items?.forEach(item => handleTreeData(item))
   return tree 
@@ -34,7 +41,7 @@ onMounted(() => {
     const model = ev.item?._cfg?.model
     if(!model) return
     if(model.items) return
-    router.go(model.link as string)
+    emits('clickLeaf', model.link as string)
   })
   // 鼠标滑过叶子节点高亮切换状态
   graph.on('node:mouseenter', ev => {
