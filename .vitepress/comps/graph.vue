@@ -1,5 +1,5 @@
 <template>
-  <div class="graph-tree" ref="tree"></div>
+  <div ref="tree"></div>
 </template>
   
 <script lang='ts' setup>
@@ -23,7 +23,6 @@ function handleTreeData(tree) {
 
 onMounted(() => {
   const graph = renderGraph(tree.value)
-
   const data = handleTreeData(props.renderData)
 
   graph.data(data)
@@ -31,32 +30,27 @@ onMounted(() => {
   graph.fitCenter()
   graph.fitView()
 
-  // TODO: 高亮
   graph.on('text-shape:click', ev => {
     const model = ev.item?._cfg?.model
     if(!model) return
     if(model.items) return
     router.go(model.link as string)
   })
-
-// graph.on('node:mouseenter', ev => {
-//   console.log(ev)
-//   ev.item?.update({
-//     style: {
-//       stroke: '#91a7ff',
-//       fill: '#edf2ff'
-//     },
-//   }, 'style')
-// })
-// graph.on('node:mouseenter', ev => {
-//   console.log(ev)
-//   ev.item?.update({
-//     style: {
-//       stroke: '#d0bfff',
-//       fill: '#f3f0ff'
-//     }
-//   })
-// })
+  // 鼠标滑过叶子节点高亮切换状态
+  graph.on('node:mouseenter', ev => {
+    const node = ev.item
+    if(!node) return
+    const nodeModel = node._cfg?.model
+    if(nodeModel?.children) return
+    node.setState('highlight', true)
+  })
+  graph.on('node:mouseleave', ev => {
+    const node = ev.item
+    if(!node) return
+    const nodeModel = node._cfg?.model
+    if(nodeModel?.children) return
+    node.setState('highlight', false)
+  })
 
   // window.onresize = () => {
   //   if (!graph || graph.get('destroyed')) return;

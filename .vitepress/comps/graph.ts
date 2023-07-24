@@ -25,18 +25,28 @@ export function renderGraph(container: HTMLElement) {
     return ({
       type: 'rect',
       size: [60, 0],
-      anchorPoints: [
-        [0, 0.5],
-        [1, 0.5],
-      ],
+      style: {
+        stroke: '#91a7ff'
+      },
+      // anchorPoints: [
+      //   [0, 0.5],
+      //   [1, 0.5],
+      // ],
       label: node.text || node.id,
       labelCfg: {
-        position: 'top'
+        position: 'top',
+        style: {
+          x: -25,
+          textAlign: 'left',
+          cursor: node.children?.length ? '' : 'pointer',
+        }
       },
-      style: {
-        cursor: 'pointer'
-      }
     })
   })
+  graph.edge(edge => ({
+    style: {
+      stroke: '#dbe4ff'
+    }
+  }))
   return graph
 }
