@@ -1,20 +1,23 @@
 <template>
 <div class="home">
-  <Graph class="graph-tree" :render-data="tree1" />
-  <Graph class="graph-tree" :render-data="tree2" />
-  <Graph class="graph-tree" :render-data="tree3" />
-  <Graph class="graph-tree" :render-data="tree4" />
-  <Graph class="graph-tree" :render-data="tree5" />
-  <Graph class="graph-tree" :render-data="tree6" />
-  <Graph class="graph-tree" :render-data="tree7" />
-  <Graph class="graph-tree" :render-data="tree8" />
+  <Graph class="graph-tree" :render-data="tree1" @click-leaf="routerTo" />
+  <Graph class="graph-tree" :render-data="tree2" @click-leaf="routerTo" />
+  <Graph class="graph-tree" :render-data="tree3" @click-leaf="routerTo" />
+  <Graph class="graph-tree" :render-data="tree4" @click-leaf="routerTo" />
+  <Graph class="graph-tree" :render-data="tree5" @click-leaf="routerTo" />
+  <Graph class="graph-tree" :render-data="tree6" @click-leaf="routerTo" />
+  <Graph class="graph-tree" :render-data="tree7" @click-leaf="routerTo" />
+  <Graph class="graph-tree" :render-data="tree8" @click-leaf="routerTo" />
 </div>
 </template>
 
 <script lang='ts' setup>
 import { ref, shallowRef, reactive, computed, watch, watchEffect, onMounted } from 'vue'
-import Graph from './graph.vue'
+import Graph from './tree/Tree'
 import { tree1, tree2, tree3, tree4, tree5, tree6, tree7, tree8 } from '../sidebar'
+import { useRouter } from 'vitepress'
+const router = useRouter()
+const routerTo = (link: string) => router.go(link)
 
 </script>
 
