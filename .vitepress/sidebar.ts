@@ -117,7 +117,7 @@ const tree3 = {
         { text: 'vue3:vue-router', link: '/程序/框架生态/vue/vue3 vue-router' },
         { text: 'vue3:pinia', link: '/程序/框架生态/vue/vue3 pinia' },
         { text: '插件与库', link: '/程序/框架生态/vue/插件与库' },
-        // { text: '核心原理', link: '/程序/框架生态/vue/核心原理' },
+        { text: '核心原理', link: '/程序/框架生态/vue/核心原理' },
       ]
     },
     // {
