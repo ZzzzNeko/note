@@ -64,6 +64,27 @@
 - `location.href = url`: 相当于 `location = url`
 - `location.search = query`: 相当于修改了 url 的 query 并重新请求
 
+## History
+
+`window.history` 与浏览器跳转历史记录相关
+
+- `history.state`: 只读属性, 历史堆栈顶部的 `state` 值
+- `history.back()`: 后退, 等价于 `history.go(-1)`
+- `history.forward()`: 前进, 等价于 `history.go(1)`
+- `history.go(n)`: 相对当前位置跳转到指定历史记录, `.go()` 或 `.go(0)` 表示重载
+- `history.pushState(state, title[, url])`: 添加 `state` 于历史堆栈, 并修改 `url`(可选)
+- `history.replaceState(state, title[, url])`: 替换 `state` 于历史堆栈, 并修改 `url`(可选)
+
+`popstate` 事件
+
+- 当激活文档中不同的历史条目时触发该事件
+- 如 用户手动导航, 调用 `history.go()`、`history.back()`、`history.forward()` 方法、修改 `#hash`
+- **`history.pushState()` 和 `history.replaceState()`** 不会触发该事件
+
+`hashchange` 事件
+
+- `url` 中 `#hash` 部分修改时触发
+
 ## Navigator
 
 `window.navigator` 表示用户代理的状态和标识
