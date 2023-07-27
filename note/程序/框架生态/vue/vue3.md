@@ -339,7 +339,7 @@ defineExpose({ some, other });
 
 ## 其他变动
 
-模板相关变动
+### 模板相关变动
 
 - **组件模板可以包含多个根节点**
 - **`v-model`** 语法变动
@@ -358,7 +358,7 @@ defineExpose({ some, other });
   - `<a name="a" v-bind="{ name: "changed" }">`: `name` 为 `changed`
   - `<a v-bind="{ name: "changed" }"  name="a">`: `name` 为 `a`
 
-移除内容
+### 移除内容
 
 - 按键修饰符: 移除 `keyCode`, 请使用按键名称
 - 过滤器移除, 建议使用 `computed` 进行转换
@@ -369,7 +369,7 @@ defineExpose({ some, other });
   - 数据相关: `Vue.set`、`Vue.delete`、`.$set`、`.$delete`、
   - 组件相关: `Vue.extend`
 
-组件与 APP
+### 组件与 APP
 
 - APP 概念: 将实例调整为 APP(写法变动，本质没区别), 对应的**全局方法调整至当前 APP**(原先影响全部实例)
   - `new Vue({ })` -> `createApp({ })`
@@ -379,6 +379,7 @@ defineExpose({ some, other });
     - `Vue.directive` -> `app.directive`
     - `Vue.component` -> `app.component`
 - 选项式 API 中可以使用 `defineComponet({})` 进行描述, 拥有更好的类型提示
+- `nextTick()` 提供了独立的函数
 
 自定义指令钩子变动: 调整为与组件生命周期名称一致
 
