@@ -3,8 +3,9 @@ import sidebar from './sidebar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "note",
+  title: "笔记",
   description: "note",
+  base: '/note',
   srcDir: "./note",
   outDir: "./docs",
   lastUpdated: true,
