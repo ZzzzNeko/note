@@ -6,6 +6,7 @@ export default defineConfig({
   title: "note",
   description: "note",
   srcDir: "./note",
+  outDir: "./docs",
   lastUpdated: true,
 
   themeConfig: {
