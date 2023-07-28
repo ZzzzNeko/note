@@ -36,17 +36,19 @@ export default defineConfig({
         ]
       }
     ],
+    sidebar,
 
+    sidebarMenuLabel: '文章',     // 移动端
+    returnToTopLabel: '回到顶部', // 移动端
+    outlineTitle: '大纲',
     outline: 'deep',
     editLink: {
-      pattern: 'https://github.com/ZzzzNeko/note/note/:path'
+      pattern: 'https://github.com/ZzzzNeko/note/tree/site/note/:path',
     },
     lastUpdatedText: '最近更新',
 
-    sidebar,
-
     socialLinks: [
-      { icon: 'github', link: 'https://gitee.com/zzzzneko/note' }
+      { icon: 'github', link: 'https://github.com/ZzzzNeko/note' }
     ]
   }
 })

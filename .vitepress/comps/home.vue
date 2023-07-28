@@ -15,24 +15,24 @@
 import { ref, shallowRef, reactive, computed, watch, watchEffect, onMounted } from 'vue'
 import Graph from './tree/Tree'
 import { tree1, tree2, tree3, tree4, tree5, tree6, tree7, tree8 } from '../sidebar'
-import { useRouter, useData } from 'vitepress'
-const siteData = useData()
+import { useRouter, useData, withBase } from 'vitepress'
+// const siteData = useData()
+// const base = siteData.site.value.base
 const router = useRouter()
-const base = siteData.site.value.base
-const routerTo = (link: string) => router.go((base.endsWith('/') ? base.slice(0, base.length - 1) : base) + link)
-siteData.site.value.base
+const routerTo = (link: string) => router.go(withBase(link))
+// const routerTo = (link: string) => router.go((base.endsWith('/') ? base.slice(0, base.length - 1) : base) + link)
 </script>
 
 <style scoped>
 .home {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 20px;
+  margin: 0 10px;
   background-color: #fff;
 }
 .graph-tree {
-  min-width: 400px;
-  width: 24%;
+  min-width: 360px;
+  width: calc(25% - 10px);
   margin: 4px;
   box-shadow: 2px 2px 4px 2px rgba(208, 191, 255, 0.6);
 }
