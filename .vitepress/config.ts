@@ -37,8 +37,7 @@ export default defineConfig({
 
     outline: 'deep',
     editLink: {
-      pattern: 'https://gitee.com/zzzzneko/note/note/:path'
-      // pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path'
+      pattern: 'https://github.com/ZzzzNeko/note/note/:path'
     },
     lastUpdatedText: '最近更新',
 
