@@ -15,10 +15,12 @@
 import { ref, shallowRef, reactive, computed, watch, watchEffect, onMounted } from 'vue'
 import Graph from './tree/Tree'
 import { tree1, tree2, tree3, tree4, tree5, tree6, tree7, tree8 } from '../sidebar'
-import { useRouter } from 'vitepress'
+import { useRouter, useData } from 'vitepress'
+const siteData = useData()
 const router = useRouter()
-const routerTo = (link: string) => router.go(link)
-
+const base = siteData.site.value.base
+const routerTo = (link: string) => router.go((base.endsWith('/') ? base.slice(0, base.length - 1) : base) + link)
+siteData.site.value.base
 </script>
 
 <style scoped>
