@@ -43,7 +43,7 @@ export default defineConfig({
     outlineTitle: '大纲',
     outline: 'deep',
     editLink: {
-      pattern: 'https://github.com/ZzzzNeko/note/tree/site/note/:path',
+      pattern: 'https://github.com/ZzzzNeko/note/tree/master/note/:path',
     },
     lastUpdatedText: '最近更新',
 
