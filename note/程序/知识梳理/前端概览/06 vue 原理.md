@@ -195,12 +195,12 @@ hash 模式
 
 history 模式
 
-- 监听 `onpopstate` 事件
+- 监听 `popstate` 事件
 - `router.push`、`router.replace`、`router.go` 对应 `history.pushState`、`history.replaceState`、`history.go`
-- 其中 `history.pushState`、`history.replaceState` 不会触发 `onpopstate` 事件, 需要覆写
+<!-- - 其中 `history.pushState`、`history.replaceState` 不会触发 `onpopstate` 事件, 需要覆写 -->
 - 服务端支持: 当页面刷新时，请求路径未匹配资源时，服务器返回 index.html 即可
 
-```js
+<!-- ```js
 // 复写 .pushState 和 .replaceState 并分发对应事件
 // 之后监听 `pushState` `replaceState` 事件即可，后续流程同监听 `hashchange` 逻辑
 let _wr = function (type) {
@@ -216,4 +216,4 @@ let _wr = function (type) {
 
 history.pushState = _wr("pushState");
 history.replaceState = _wr("replaceState");
-```
+``` -->
