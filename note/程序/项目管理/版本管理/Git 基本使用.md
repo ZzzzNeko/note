@@ -45,7 +45,7 @@ git rm <filename>
 git commit -m "描述信息"
 ```
 
-## 提交修改
+## 撤销修改
 
 撤销 add
 
@@ -108,6 +108,8 @@ git branch -r
 git branch -a
 # 合并指定分支到当前分支
 git merge <branch>
+# 合并分支, 该场景可能出现在 remote 发生变动后, 分支的历史源不同
+git merge <branch> --allow-unrelated-histories
 # 删除指定分支(未合并的分支无法删除)
 git branch -d <branch>
 # 强制删除指定分支(用于删除未合并的分支，通常用于开发内容被取消而无需合并的分支)
@@ -142,7 +144,6 @@ git remote prune origin
 git push origin <分支名>
 # 将删除对应分支的操作推送到远端
 git push origin <分支名> --delete
-
 ```
 
 ## 标签管理
