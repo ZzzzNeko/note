@@ -1,27 +1,40 @@
 <template>
-  <div class="loading">
-    <div class="spinner">
-      <div class="rect1"></div>
-      <div class="rect2"></div>
-      <div class="rect3"></div>
-      <div class="rect4"></div>
-      <div class="rect5"></div>
+  <div class="loading-wrap">
+    <div>
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+      <div class="content">{{ tips }}</div>
     </div>
-    <div class="content"><slot /></div>
   </div>
 </template>
 
 <script lang='ts' setup>
-// import { ref, shallowRef, reactive, computed, watch, watchEffect, onMounted } from 'vue'
-// interface Props {
-//   size: 'small' | 'normal' | 'large'
-// }
-// const props = withDefaults(defineProps<Props>(), {
-//   size: 'normal'
-// })
+interface Props {
+  tips?: string
+}
+const props = withDefaults(defineProps<Props>(), {
+  tips: '加载中...'
+})
 </script>
 
 <style scoped>
+.loading-wrap {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .spinner {
   width: 160px;
   height: 50px;
