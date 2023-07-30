@@ -184,11 +184,11 @@ const tree5 = {
   text: '工作原理',
   items: [
     {
-      text: 'v8',
+      text: 'js引擎',
       collapsed: false,
       items: [
-        { text: '内存管理', link: '/程序/工作原理/v8/内存管理' },
-        { text: '事件循环', link: '/程序/工作原理/v8/事件循环' },
+        { text: '内存管理', link: '/程序/工作原理/js引擎/内存管理' },
+        { text: '事件循环', link: '/程序/工作原理/js引擎/事件循环' },
       ]
     },
     {
