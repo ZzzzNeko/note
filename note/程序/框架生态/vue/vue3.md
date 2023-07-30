@@ -316,7 +316,7 @@ defineExpose({ some, other });
 新增 `<Teleport>` 和 `<Suspense>` 组件
 
 - `<Teleport>` 用于将包含内容渲染到指定元素下, 通常用于 模态框、消息、通知 等适合全局展示的内容
-- `<Suspense>` 用于对异步组件, 在实际组件渲染完成前给定一个展示内容, **实验性** 组件，暂不介绍
+- `<Suspense>` 用于对异步组件, 在实际组件渲染完成前给定一个展示内容, **实验性** 组件
 
 ```html
 <template>
@@ -334,6 +334,26 @@ defineExpose({ some, other });
     // 为 true 时 to 失效
     disabled?: boolean;
   }
+</script>
+```
+
+```html
+<template>
+  <Suspense>
+    <template #default>
+      <SomeAsyncComp />
+    </template>
+    <template #fallback>
+      <div class="loading-wrap">
+        <Loading>加载中...</Loading>
+      </div>
+    <template>
+  </Suspense>
+</template>
+<script lang='ts' setup>
+import { defineAsyncComponent } from 'vue'
+import Loading from './loading.vue'
+const SomeAsyncComp = defineAsyncComponent(() => import('./some/async/comp'))
 </script>
 ```
 
