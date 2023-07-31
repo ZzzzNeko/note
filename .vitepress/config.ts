@@ -3,6 +3,7 @@ import sidebar from './sidebar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'zh-CN',
   title: "笔记",
   description: "note",
   base: '/note',
@@ -24,7 +25,7 @@ export default defineConfig({
           { text: '项目管理', link: '/程序/项目管理/版本管理/Git 基本使用' },
           { text: '框架生态', link: '/程序/框架生态/koa/01 基本使用' },
           { text: '网络通信', link: '/程序/网络通信/网络模型/网络模型' },
-          { text: '工作原理', link: '/程序/工作原理/v8/内存管理' },
+          { text: '工作原理', link: '/程序/工作原理/js引擎/内存管理' },
           { text: '场景应用', link: '/程序/经验汇总/场景应用/剪切板' },
           { text: '知识梳理', link: '/程序/知识梳理/前端概览/01 语言基础' },
         ]
