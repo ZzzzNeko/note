@@ -38,6 +38,7 @@ const tree1 = {
         { text: 'BOM', link: '/程序/前端基础/javascript/BOM' },
         { text: 'DOM', link: '/程序/前端基础/javascript/DOM' },
         { text: '尺寸与定位', link: '/程序/前端基础/javascript/尺寸与定位' },
+        { text: '正则表达式', link: '/程序/前端基础/javascript/正则表达式' }
       ]
     },
     {
