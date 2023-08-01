@@ -94,6 +94,14 @@ const tree2 = {
         { text: '快速开始', link: '/程序/项目管理/打包工具 - vite/快速开始' },
         { text: '项目配置', link: '/程序/项目管理/打包工具 - vite/项目配置' },
       ]
+    },
+    {
+      text: '文档工具',
+      collapsed: false,
+      items: [
+        { text: 'jsdoc', link: '/程序/项目管理/文档工具/jsdoc' },
+        { text: 'vitepress', link: '/程序/项目管理/文档工具/vitepress' }
+      ]
     }
   ],
 }
