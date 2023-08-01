@@ -35,6 +35,7 @@ const tree1 = {
       text: 'javascript',
       collapsed: false,
       items: [
+        { text: '文件模块', link: '/程序/前端基础/javascript/文件模块' },
         { text: 'BOM', link: '/程序/前端基础/javascript/BOM' },
         { text: 'DOM', link: '/程序/前端基础/javascript/DOM' },
         { text: '尺寸与定位', link: '/程序/前端基础/javascript/尺寸与定位' },
