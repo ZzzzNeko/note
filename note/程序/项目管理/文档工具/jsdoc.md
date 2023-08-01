@@ -1,6 +1,6 @@
 # jsdoc
 
-[jsdoc](<(http://usejsdoc.org/)>) 用于提取按照规范编写的 js 注释并生产对应的文档 <br />
+[jsdoc](https://jsdoc.bootcss.com/) 用于提取按照规范编写的 js 注释并生产对应的文档 <br />
 一般用于对工具库生成对应的文档站点 <br />
 目前主流代码编辑器都支持 jsdoc 提供的注释规范 <br />
 在日常编码中, 对于公共函数模块, 最好也提供相应的规范注释 <br />
