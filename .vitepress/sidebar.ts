@@ -221,24 +221,32 @@ const tree6 = {
       text: '场景应用',
       collapsed: false,
       items: [
-        { text: '剪切板', link: '/程序/经验汇总/场景应用/剪切板' },
-        { text: '批量打印', link: '/程序/经验汇总/场景应用/批量打印' },
         { text: '图片懒加载', link: '/程序/经验汇总/场景应用/图片懒加载' },
-        { text: '资源下载', link: '/程序/经验汇总/场景应用/资源下载' },
-        { text: 'base64 转换', link: '/程序/经验汇总/场景应用/base64 转换' },
-        { text: 'cheerio', link: '/程序/经验汇总/场景应用/cheerio' },
-        { text: 'markdown解析', link: '/程序/经验汇总/场景应用/markdown解析' },
-        { text: 'node 图形验证码', link: '/程序/经验汇总/场景应用/node 图形验证码' },
-        { text: 'qrcode生成', link: '/程序/经验汇总/场景应用/qrcode生成' },
         { text: 'webp判断', link: '/程序/经验汇总/场景应用/webp判断' },
+        { text: '资源下载', link: '/程序/经验汇总/场景应用/资源下载' },
+        { text: '媒体录制', link: '/程序/经验汇总/场景应用/媒体录制' },
+        { text: '回到顶部', link: '/程序/经验汇总/场景应用/回到顶部' },
+        { text: '剪切板', link: '/程序/经验汇总/场景应用/剪切板' },
+        { text: 'base64 转换', link: '/程序/经验汇总/场景应用/base64 转换' },
       ]
     },
     {
-      text: '方案工具',
+      text: '功能工具',
       collapsed: false,
       items: [
-        { text: '代码调试', link: '/程序/经验汇总/方案工具/代码调试' },
-        { text: '单点登录', link: '/程序/经验汇总/方案工具/单点登录' },
+        { text: '批量打印', link: '/程序/经验汇总/功能工具/批量打印' },
+        { text: 'cheerio', link: '/程序/经验汇总/功能工具/cheerio' },
+        { text: 'markdown解析', link: '/程序/经验汇总/功能工具/markdown解析' },
+        { text: 'node 图形验证码', link: '/程序/经验汇总/功能工具/node 图形验证码' },
+        { text: 'qrcode生成', link: '/程序/经验汇总/功能工具/qrcode生成' },
+      ]
+    },
+    {
+      text: '项目方案',
+      collapsed: false,
+      items: [
+        { text: '代码调试', link: '/程序/经验汇总/项目方案/代码调试' },
+        { text: '单点登录', link: '/程序/经验汇总/项目方案/单点登录' },
       ]
     }
   ],
@@ -261,7 +269,7 @@ const tree7 = {
   ],
 }
 const tree8 = {
-  text: '基础知识',
+  text: '金融基础',
   items: [
     {
       text: '财务报表',
