@@ -9,12 +9,13 @@
     <TocTree class="toc-tree" :render-data="tree6" @click-leaf="routerTo" />
     <TocTree class="toc-tree" :render-data="tree7" @click-leaf="routerTo" />
     <TocTree class="toc-tree" :render-data="tree8" @click-leaf="routerTo" />
+    <TocTree class="toc-tree" :render-data="tree9" @click-leaf="routerTo" />
   </div>
 </template>
 
 <script lang='ts' setup>
 import { defineAsyncComponent, ref } from 'vue'
-import { tree1, tree2, tree3, tree4, tree5, tree6, tree7, tree8 } from '../sidebar'
+import { tree1, tree2, tree3, tree4, tree5, tree6, tree7, tree8, tree9 } from '../sidebar'
 import { useRouter, useData, withBase } from 'vitepress'
 import Loading from './loading.vue'
 
@@ -40,10 +41,18 @@ const routerTo = (link: string) => router.go(withBase(link))
   margin: 0 10px;
   background-color: #fff;
 }
+/* 4列 */
 .toc-tree {
   min-width: 360px;
   width: calc(25% - 10px);
   margin: 4px;
   box-shadow: 2px 2px 4px 2px rgba(208, 191, 255, 0.6);
 }
+/* 3 列 */
+/* .toc-tree {
+  min-width: 420px;
+  width: calc(33% - 20px);
+  margin: 10px;
+  box-shadow: 2px 2px 4px 2px rgba(208, 191, 255, 0.6);
+} */
 </style>

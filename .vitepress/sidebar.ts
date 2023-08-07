@@ -57,6 +57,64 @@ const tree1 = {
   ]
 }
 const tree2 = {
+  text: '网络通信',
+  items: [
+    {
+      text: '网络模型',
+      collapsed: false,
+      items: [
+        { text: '网络模型', link: '/程序/网络通信/网络模型/网络模型' },
+        { text: '应用层 - HTTP', link: '/程序/网络通信/网络模型/应用层 - HTTP' },
+        { text: '应用层 - DNS', link: '/程序/网络通信/网络模型/应用层 - DNS' },
+        { text: '传输层 - TCP', link: '/程序/网络通信/网络模型/传输层 - TCP' },
+        { text: '传输层 - UDP', link: '/程序/网络通信/网络模型/传输层 - UDP' },
+      ]
+    },
+    {
+      text: '网络安全',
+      collapsed: false,
+      items: [
+        { text: '常见攻击', link: '/程序/网络通信/网络安全/常见攻击' },
+        { text: '资源盗链', link: '/程序/网络通信/网络安全/资源盗链' },
+      ]
+    },
+    {
+      text: '跨域通信',
+      collapsed: false,
+      items: [
+        { text: '同源策略', link: '/程序/网络通信/跨域通信/01 同源策略' },
+        { text: '跨域通信', link: '/程序/网络通信/跨域通信/02 跨域通信' },
+        { text: '跨域通信 - CORS', link: '/程序/网络通信/跨域通信/02-01 跨域通信 - CORS' },
+        { text: '跨域通信 - JSONP', link: '/程序/网络通信/跨域通信/02-02 跨域通信 - JSONP' },
+        { text: '跨域通信 - postMessage', link: '/程序/网络通信/跨域通信/02-03 跨域通信 - postMessage' },
+      ]
+    }
+  ],
+}
+const tree3 = {
+  text: '工作原理',
+  items: [
+    {
+      text: 'js引擎',
+      collapsed: false,
+      items: [
+        { text: '内存管理', link: '/程序/工作原理/js引擎/内存管理' },
+        { text: '事件循环', link: '/程序/工作原理/js引擎/事件循环' },
+      ]
+    },
+    {
+      text: '浏览器',
+      collapsed: false,
+      items: [
+        { text: '高层结构', link: '/程序/工作原理/浏览器/高层结构' },
+        { text: '工作流程', link: '/程序/工作原理/浏览器/工作流程' },
+        { text: '渲染引擎', link: '/程序/工作原理/浏览器/渲染引擎' },
+        { text: '缓存控制', link: '/程序/工作原理/浏览器/缓存控制' },
+      ]
+    },
+  ],
+}
+const tree4 = {
   text: '项目管理',
   items: [
     {
@@ -105,7 +163,7 @@ const tree2 = {
     }
   ],
 }
-const tree3 = {
+const tree5 = {
   text: '框架生态',
   items: [
     {
@@ -131,90 +189,48 @@ const tree3 = {
         { text: '补充内容', link: '/程序/框架生态/vue/补充内容' },
       ]
     },
-    // {
-    //   text: '数据可视化 - g2',
-    //   collapsed: false,
-    //   items: []
-    // },
+  ],
+}
+const tree6 = {
+  text: '可视化库',
+  items: [
+    {
+      text: '数据可视化 - g2',
+      collapsed: false,
+      items: [
+        { text: '图形语法', link: '/程序/可视化库/g2/01 图形语法' },
+        { text: '几何图形', link: '/程序/可视化库/g2/02 几何图形' },
+        { text: '坐标尺度', link: '/程序/可视化库/g2/03 坐标尺度' },
+        { text: '图形组件', link: '/程序/可视化库/g2/04 图形组件' },
+        { text: '视图元素', link: '/程序/可视化库/g2/05 视图元素' },
+        { text: '交互语法', link: '/程序/可视化库/g2/06 交互语法' },
+        { text: '数据处理', link: '/程序/可视化库/g2/07 数据处理' },
+        { text: '分面展示', link: '/程序/可视化库/g2/08 分面展示' },
+        { text: '动画过渡', link: '/程序/可视化库/g2/09 动画过渡' },
+        // { text: '注册扩展', link: '/程序/可视化库/g2/10 注册扩展' },
+      ]
+    },
     {
       text: '数据可视化 - g6',
       collapsed: false,
       items: [
-        { text: '快速开始', link: '/程序/框架生态/g6/01 快速开始' },
-        { text: '图的元素', link: '/程序/框架生态/g6/02 图的元素' },
-        { text: '图的元素 - Shape', link: '/程序/框架生态/g6/02-01 图的元素 - Shape' },
-        { text: '图的元素 - Node', link: '/程序/框架生态/g6/02-02 图的元素 - Node' },
-        { text: '图的元素 - Edge', link: '/程序/框架生态/g6/02-03 图的元素 - Edge' },
-        { text: '图的元素 - Combo', link: '/程序/框架生态/g6/02-04 图的元素 - Combo' },
-        { text: '图的布局', link: '/程序/框架生态/g6/03 图的布局' },
-        { text: '图的布局 - 一般布局', link: '/程序/框架生态/g6/03-01 图的布局 - 一般布局' },
-        { text: '图的布局 - 树形布局', link: '/程序/框架生态/g6/03-02 图的布局  - 树形布局' },
-        { text: '交互事件', link: '/程序/框架生态/g6/04 交互事件' },
-        { text: '功能组件', link: '/程序/框架生态/g6/05 功能组件' },
-        { text: '基础动画', link: '/程序/框架生态/g6/06 基础动画' },
+        { text: '快速开始', link: '/程序/可视化库/g6/01 快速开始' },
+        { text: '图的元素', link: '/程序/可视化库/g6/02 图的元素' },
+        { text: '图的元素 - Shape', link: '/程序/可视化库/g6/02-01 图的元素 - Shape' },
+        { text: '图的元素 - Node', link: '/程序/可视化库/g6/02-02 图的元素 - Node' },
+        { text: '图的元素 - Edge', link: '/程序/可视化库/g6/02-03 图的元素 - Edge' },
+        { text: '图的元素 - Combo', link: '/程序/可视化库/g6/02-04 图的元素 - Combo' },
+        { text: '图的布局', link: '/程序/可视化库/g6/03 图的布局' },
+        { text: '图的布局 - 一般布局', link: '/程序/可视化库/g6/03-01 图的布局 - 一般布局' },
+        { text: '图的布局 - 树形布局', link: '/程序/可视化库/g6/03-02 图的布局  - 树形布局' },
+        { text: '交互事件', link: '/程序/可视化库/g6/04 交互事件' },
+        { text: '功能组件', link: '/程序/可视化库/g6/05 功能组件' },
+        { text: '基础动画', link: '/程序/可视化库/g6/06 基础动画' },
       ]
     }
   ],
 }
-const tree4 = {
-  text: '网络通信',
-  items: [
-    {
-      text: '网络模型',
-      collapsed: false,
-      items: [
-        { text: '网络模型', link: '/程序/网络通信/网络模型/网络模型' },
-        { text: '应用层 - HTTP', link: '/程序/网络通信/网络模型/应用层 - HTTP' },
-        { text: '应用层 - DNS', link: '/程序/网络通信/网络模型/应用层 - DNS' },
-        { text: '传输层 - TCP', link: '/程序/网络通信/网络模型/传输层 - TCP' },
-        { text: '传输层 - UDP', link: '/程序/网络通信/网络模型/传输层 - UDP' },
-      ]
-    },
-    {
-      text: '网络安全',
-      collapsed: false,
-      items: [
-        { text: '常见攻击', link: '/程序/网络通信/网络安全/常见攻击' },
-        { text: '资源盗链', link: '/程序/网络通信/网络安全/资源盗链' },
-      ]
-    },
-    {
-      text: '跨域通信',
-      collapsed: false,
-      items: [
-        { text: '同源策略', link: '/程序/网络通信/跨域通信/01 同源策略' },
-        { text: '跨域通信', link: '/程序/网络通信/跨域通信/02 跨域通信' },
-        { text: '跨域通信 - CORS', link: '/程序/网络通信/跨域通信/02-01 跨域通信 - CORS' },
-        { text: '跨域通信 - JSONP', link: '/程序/网络通信/跨域通信/02-02 跨域通信 - JSONP' },
-        { text: '跨域通信 - postMessage', link: '/程序/网络通信/跨域通信/02-03 跨域通信 - postMessage' },
-      ]
-    }
-  ],
-}
-const tree5 = {
-  text: '工作原理',
-  items: [
-    {
-      text: 'js引擎',
-      collapsed: false,
-      items: [
-        { text: '内存管理', link: '/程序/工作原理/js引擎/内存管理' },
-        { text: '事件循环', link: '/程序/工作原理/js引擎/事件循环' },
-      ]
-    },
-    {
-      text: '浏览器',
-      collapsed: false,
-      items: [
-        { text: '高层结构', link: '/程序/工作原理/浏览器/高层结构' },
-        { text: '工作流程', link: '/程序/工作原理/浏览器/工作流程' },
-        { text: '渲染引擎', link: '/程序/工作原理/浏览器/渲染引擎' },
-        { text: '缓存控制', link: '/程序/工作原理/浏览器/缓存控制' },
-      ]
-    },
-  ],
-}
-const tree6 = {
+const tree7 = {
   text: '经验汇总',
   items: [
     {
@@ -251,7 +267,7 @@ const tree6 = {
     }
   ],
 }
-const tree7 = {
+const tree8 = {
   text: '知识梳理',
   items: [
     {
@@ -268,7 +284,7 @@ const tree7 = {
     },
   ],
 }
-const tree8 = {
+const tree9 = {
   text: '金融基础',
   items: [
     {
@@ -306,15 +322,16 @@ const tree8 = {
 
 const sidebar: DefaultTheme.Sidebar = {
   '/程序/前端基础/': tree1.items,
-  '/程序/项目管理/': tree2.items,
-  '/程序/框架生态/': tree3.items,
-  '/程序/网络通信/': tree4.items,
-  '/程序/工作原理/': tree5.items,
-  '/程序/经验汇总/': tree6.items,
-  '/程序/知识梳理/': tree7.items,
-  '/金融/基础知识/': tree8.items
+  '/程序/网络通信/': tree2.items,
+  '/程序/工作原理/': tree3.items,
+  '/程序/项目管理/': tree4.items,
+  '/程序/框架生态/': tree5.items,
+  '/程序/可视化库/': tree6.items,
+  '/程序/经验汇总/': tree7.items,
+  '/程序/知识梳理/': tree8.items,
+  '/金融/基础知识/': tree9.items
 }
 
 export default sidebar
 
-export { tree1, tree2, tree3, tree4, tree5, tree6, tree7, tree8 }
+export { tree1, tree2, tree3, tree4, tree5, tree6, tree7, tree8, tree9 }
