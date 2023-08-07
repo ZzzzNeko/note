@@ -338,6 +338,23 @@ const tree10 = {
     }
   ]
 }
+const tree11 = {
+  text: '宏观探讨',
+  items: [
+    {
+      text: '宏观数据',
+      items: [
+        { text: '居民负债', link: '/金融/宏观探讨/宏观数据/居民负债' }
+      ]
+    },
+    {
+      text: '闲言碎语',
+      items: [
+        { text: '越活越穷', link: '/金融/宏观探讨/闲言碎语/越活越穷' }
+      ]
+    }
+  ]
+}
 
 const sidebar: DefaultTheme.Sidebar = {
   '/程序/前端基础/': tree1.items,
@@ -350,8 +367,9 @@ const sidebar: DefaultTheme.Sidebar = {
   '/程序/知识梳理/': tree8.items,
   '/金融/基础知识/': tree9.items,
   '/金融/行业知识/': tree10.items,
+  '/金融/宏观探讨/': tree11.items,
 }
 
 export default sidebar
 
-export { tree1, tree2, tree3, tree4, tree5, tree6, tree7, tree8, tree9, tree10 }
+export { tree1, tree2, tree3, tree4, tree5, tree6, tree7, tree8, tree9, tree10, tree11 }
