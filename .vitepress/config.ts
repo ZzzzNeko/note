@@ -35,7 +35,7 @@ export default defineConfig({
         text: '金融',
         items: [
           { text: '基础知识', link: '/金融/基础知识/财务报表/01 财报简介' },
-          // { text: '行业知识', link: '/金融/行业知识/' }
+          { text: '行业知识', link: '/金融/行业知识/能源化工/能源化工产业链' }
         ]
       }
     ],

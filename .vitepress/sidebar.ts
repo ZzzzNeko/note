@@ -319,6 +319,18 @@ const tree9 = {
     }
   ]
 }
+const tree10 = {
+  text: '行业知识',
+  items: [
+    {
+      text: '能源化工',
+      collapsed: false,
+      items: [
+        { text: '能源化工产业链', link: '/金融/行业知识/能源化工/能源化工产业链' },
+      ]
+    }
+  ]
+}
 
 const sidebar: DefaultTheme.Sidebar = {
   '/程序/前端基础/': tree1.items,
@@ -329,9 +341,10 @@ const sidebar: DefaultTheme.Sidebar = {
   '/程序/可视化库/': tree6.items,
   '/程序/经验汇总/': tree7.items,
   '/程序/知识梳理/': tree8.items,
-  '/金融/基础知识/': tree9.items
+  '/金融/基础知识/': tree9.items,
+  '/金融/行业知识/': tree10.items,
 }
 
 export default sidebar
 
-export { tree1, tree2, tree3, tree4, tree5, tree6, tree7, tree8, tree9 }
+export { tree1, tree2, tree3, tree4, tree5, tree6, tree7, tree8, tree9, tree10 }
