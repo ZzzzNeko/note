@@ -330,6 +330,14 @@ const tree10 = {
       ]
     },
     {
+      text: '金属材料',
+      collapsed: false,
+      items: [
+        { text: '钢铁是怎样炼成的', link: '/金融/行业知识/金属材料/钢铁是怎样炼成的' },
+        { text: '金属铝', link: '/金融/行业知识/金属材料/金属铝' }
+      ]
+    },
+    {
       text: '芯片电子',
       collapsed: false,
       items: [
