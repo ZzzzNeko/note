@@ -328,6 +328,13 @@ const tree10 = {
       items: [
         { text: '能源化工产业链', link: '/金融/行业知识/能源化工/能源化工产业链' },
       ]
+    },
+    {
+      text: '芯片电子',
+      collapsed: false,
+      items: [
+        { text: 'PCB', link: '/金融/行业知识/芯片电子/PCB' },
+      ]
     }
   ]
 }
