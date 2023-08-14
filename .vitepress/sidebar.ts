@@ -38,6 +38,7 @@ const tree1 = {
         { text: '文件模块', link: '/程序/前端基础/javascript/文件模块' },
         { text: 'BOM', link: '/程序/前端基础/javascript/BOM' },
         { text: 'DOM', link: '/程序/前端基础/javascript/DOM' },
+        // { text: 'Event', link: '/程序/前端基础/javascript/Event' },
         { text: '尺寸与定位', link: '/程序/前端基础/javascript/尺寸与定位' },
         { text: '正则表达式', link: '/程序/前端基础/javascript/正则表达式' }
       ]
@@ -313,9 +314,11 @@ const tree9 = {
       ]
     },
     {
-      text: '行为经济学(TODO:)',
+      text: '行为经济学',
       collapsed: false,
-      items: []
+      items: [
+        { text: '行为经济学通识', link: '/金融/基础知识/行为经济学/行为经济学通识' }
+      ]
     }
   ]
 }
