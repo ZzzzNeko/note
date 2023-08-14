@@ -112,7 +112,7 @@
 
 ```js
 // 与 vuex 类似，可以映射为只读的计算属性
-import { mapState, mapWeitableState } from "pinia";
+import { mapState, mapWritableState } from "pinia";
 
 export default {
   computed: {
@@ -126,7 +126,7 @@ export default {
 // 映射为可修改的 state
 export default {
   computed: {
-    ...mapWeitableState(useUserStore, {
+    ...mapWritableState(useUserStore, {
       rename: "name",
     }),
   },
