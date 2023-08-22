@@ -6,7 +6,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: "笔记",
   description: "note",
-  base: '/note',
+  base: '/',
   srcDir: "./note",
   outDir: "./docs",
   lastUpdated: true,
