@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview --port 80"
   },
   "devDependencies": {
     "vitepress": "1.0.0-beta.7"
