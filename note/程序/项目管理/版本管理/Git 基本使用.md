@@ -23,7 +23,7 @@ cd ~/.ssh/
 # 查看邮箱名称并进行设置
 git config --global --list
 git config --global user.name  "名称"
-git config --globsl user.email "邮箱"
+git config --global user.email "邮箱"
 
 ssh-keygen -t rsa -C "邮箱"
 # 三次回车 (确认 ssh-key 生成地址、密码、确认密码)，这里使用默认地址不设置密码即可
